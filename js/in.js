@@ -25,7 +25,7 @@ const jogar = (id) => {
 
   // Preenche a célula com a imagem do jogador atual
   tabuleiro[index] = jogadorAtual;
-  document.getElementById(id).src = `/img/${jogadorAtual}.png`;
+  document.getElementById(id).src = `img/${jogadorAtual}.png`;
 
   numJogadas++;
 
@@ -78,7 +78,7 @@ const jogarContraPCFunc = () => {
   }
 
   tabuleiro[jogadaPC] = 'Mordecai';
-  document.getElementById(`c${jogadaPC + 1}`).src = "/img/Mordecai.png";
+  document.getElementById(`c${jogadaPC + 1}`).src = "img/Mordecai.png";
   numJogadas++;
 
   if (verificarVitoria()) {
@@ -100,7 +100,7 @@ const reiniciarJogo = () => {
   tabuleiro = ["", "", "", "", "", "", "", "", ""];
 
   for (let i = 1; i <= 9; i++) {
-    document.getElementById(`c${i}`).src = "/img/transp.png";
+    document.getElementById(`c${i}`).src = "img/transp.png";
   }
 
   document.getElementById("resultado").textContent = "";
