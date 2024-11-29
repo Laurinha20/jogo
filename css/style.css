@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Layout geral */
+  body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #f0e8e0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/img/tela.jfif'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    overflow: hidden; /* Impede a rolagem */
+}
+
+  /* Container principal do jogo */
+.container {
+    width: 90%;
+    max-width: 600px; /* Limitar largura máxima */
+    max-height: 600px; /* Limitar altura máxima */
+    text-align: center;
+    background-image: linear-gradient(to right, #2f0430, #310a0a); 
+    border-radius: 15px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1 {
+    font-size: 2rem; /* Ajustar o tamanho do título */
+    color: #e84b4b; /* Vermelho forte, tema do desenho */
+    text-shadow: 2px 2px 4px rgba(220, 220, 220, 0.3); /* Sombras no texto para dar um efeito de destaque */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#gameBoard {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: auto;
+}
+
+td {
+    width: 80px; /* Diminuir o tamanho das células */
+    height: 80px;
+    text-align: center;
+    vertical-align: middle;
+    border: 2px solid #e84b4b; /* Bordas vermelhas, tema do desenho */
+    background-color: #fff9d0;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+td:hover {
+    background-color: #ffebd2; /* Cor clara de destaque ao passar o mouse */
+}
+
+img {
+    width: 60%; /* Reduzir tamanho das imagens (X e O) */
+    height: 60%;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+img:hover {
+    transform: scale(1.1); /* Efeito de zoom no passar o mouse */
+}
+
+  /* Estilo do botão de reiniciar */
+#reiniciar {
+
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #ff7b7b; /* Cor vermelha para o botão */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.9s;
+    width: 50%;
+    margin-left: 145px ;
+}
+
+button:hover {
+    background-color: #e84b4b; /* Cor de fundo do botão quando passa o mouse */
+}
+
+  /* Estilo do formulário de jogar contra a máquina */
+  .formulario {
+    margin-top: 30px;
+    font-size: 1.1rem;
+    color: #e84b4b;
+  }
+  
+  .formulario input[type="radio"] {
+    margin: 0 10px;
+    accent-color: #ff7b7b; /* Adiciona uma cor personalizada para os rádios */
+  }
+  
+  .formulario label {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    color: #e84b4b;
+  }
+  
+select {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff4d4d; /* Vermelho para o texto do resultado */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Efeito de sombra no resultado */
+}
+
+
+  /* Ajuste para dispositivos pequenos */
+@media (max-width: 480px) {
+    h1 {
+font-size: 2rem;
+    }
+
+    td {
+    width: 70px;
+    height: 70px;
+    }
+
+    img {
+    width: 50%;
+    height: 50%;
+    }
+
+    button {
+    font-size: 1rem;
+    }
+
+    #resultado {
+    font-size: 1.1rem;
+    }
+}
